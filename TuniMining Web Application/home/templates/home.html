@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<link rel="stylesheet" type="text/css" href="{% static 'home/css/home.css' %}" />
+<link rel="icon" type="image/png" href="{% static 'home/images/icon.png' %}" />
+
+<script src="{% static 'home/js/superpose.js' %}"></script>
+
+    <div class = "main">
+
+        <div class = "description ">
+            <div class = "parts" id="home">
+                <img src = "{% static 'home/images/logo.png' %}">
+                <p style="margin-top: -2vh;">
+                    A web-based platform for visualization and tracking of public opinion and e-reputation in Tunisia based on social media analytics.
+                </p>
+
+            </div>
+            <div class="parts" id="categories">
+                <div class = "back" onclick="back(0)"> < Back</div>
+                <div class = "choose-cat" > Choose a category: </div>
+                <div class="cat-container" >
+                  <div class="grid-item" onclick="cat(0)" id="cat1" style = "background-color: rgb(173,110,161); ">Art</div>
+                  <div class="grid-item" onclick="cat(1)" id="cat2" style = "background-color: rgb(206,10,49); ">Business</div>
+                  <div class="grid-item" onclick="cat(2)" id="cat3" style = "background-color: rgb(8,214,137) ; ">Sport</div>
+                </div>
+                <div class="cat-container2 sec">
+                  <div class="grid-item" onclick="cat(3)" id="cat4" style = "background-color: rgb(248,202,0); ">Entertainment</div>
+                  <div class="grid-item" onclick="cat(4)" id="cat5" style = "background-color: rgb(78,160,170); ">Politics</div>
+                </div>
+            </div>
+
+
+            <div class="parts" id="subcategories">
+                <div class = "back" onclick="back(1)"> < Back</div>
+                <div class = "choose-sub"> Choose a subcategory: </div>
+                <div class="sub-container">
+                  <div class="grid-item"  id="sub1" onclick="sub(0)" style = "background-color: rgb(255,130,58); ">Music</div>
+                  <div class="grid-item" id="sub2" onclick="sub(1)" style = "background-color: rgb(0,153,137); ">Cinema</div>
+                </div>
+            </div>
+            <form  action="{% url 'testresult' %}" method="post" id="form">
+                    {% csrf_token %}
+                    <input type="hidden" name="selected-entity" value="" id="input">
+                </form>
+            <div class="parts" id="entities">
+                <div class = "back" onclick="back(2)"> < Back</div>
+                <div class = "choose-ent"> Choose an entity: </div>
+                <div class="ent-container">
+                  <div class="grid-item" id="ent1" onclick="ent(0)" style = "background-color: rgb(233,96,88); ">Hassen Doss</div>
+                  <div class="grid-item" id="ent2" onclick="ent(1)"style = "background-color: rgb(85,98,112); ">Manel Amara</div>
+                  <div class="grid-item" id="ent3" onclick="ent(2)"style = "background-color: rgb(255,123,52); ">Balti</div>
+                  <div class="grid-item" id="ent4" onclick="ent(3)"style = "background-color: rgb(125,179,27); ">Kafon</div>
+                  <div class="grid-item" id="ent5" onclick="ent(4)" style = "background-color: rgb(8,214,137); ">Samara</div>
+                  <div class="grid-item" id="ent6" onclick="ent(5)" style = "background-color: rgb(252,87,124); ">A.L.A</div>
+                  <div class="grid-item" id="ent7" onclick="ent(6)" style = "background-color: rgb(0,173,201); ">Emel Mathlouthi</div>
+                  <div class="grid-item" id="ent8" onclick="ent(7)" style = "background-color: rgb(176,97,108); ">Yasmine Azaiez</div>
+                  <div class="grid-item" id="ent9" onclick="ent(8)" style = "background-color: rgb(24,111,111); ">Zina Gasrinia</div>
+                </div>
+
+            </div>
+
+            <div class="parts" id="wait">
+                Please wait a moment ...
+
+            </div>
+
+
+
+        </div>
+        <div id="search" onclick="home()" align="center"> Search > </div>
+
+    </div>
+
+{% endblock %}

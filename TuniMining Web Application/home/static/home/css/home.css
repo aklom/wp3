@@ -1,0 +1,170 @@
+ {% load static %}
+
+@font-face {
+  font-family: 'next';
+  src: url('../fonts/nexa/light.otf')
+}
+@font-face {
+  font-family: 'next-bold';
+  src: url('../fonts/nexa/bold.otf')
+}
+@font-face {
+  font-family: 'brush';
+  src: url('../fonts/BrushScriptStd.otf')
+}
+.description img {
+    margin-left: 1vw;
+    margin-top: 6vh;
+}
+
+.description p {
+    color: white;
+    text-align: center;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    font-size: 3vh;
+    margin-top: 7vh;
+    font-family: "next";
+}
+
+#search {
+    width: 12vw;
+    height: 8vh;
+    color: white;
+    background-color: rgba(0,0,0,0.9);
+    font-weight: bold;
+    margin-top: 75vh;
+    margin-left: 43vw;
+    position: absolute;
+    padding-top: 2vh;
+    font-family: "next";
+    font-size:3vh;
+    cursor: pointer;
+}
+
+.choose-cat {
+    color: white;
+    font-family: "next";
+    font-size: 3vh;
+    margin-top: 11vh;
+}
+
+.choose-sub {
+    color: white;
+    font-family: "next";
+    font-size: 3vh;
+    margin-top: 11vh;
+}
+
+.choose-ent {
+    color: white;
+    font-family: "next";
+    font-size: 3vh;
+    margin-top: 3vh;
+}
+
+.cat-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 0vw;
+  grid-row-gap: 3vh;
+  margin-left: 7vw;
+  margin-top: 4vh;
+
+}
+.cat-container2 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-row-gap: 3vh;
+  margin-left: 15vw;
+  margin-top: 6vh;
+
+}
+
+.sub-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 0vw;
+  grid-row-gap: 3vh;
+  margin-left: 14vw;
+  margin-top: 7vh;
+
+}
+
+.ent-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 0vw;
+  grid-row-gap: 3vh;
+  margin-left: 7vw;
+  margin-top: 4vh;
+
+}
+
+.grid-item {
+    width: 12vw;
+    height: 8vh;
+    background-color: white;
+    color: white;
+    font-size: 3vh;
+    padding-top: 2vh;
+    cursor: pointer;
+    line-height: 2.5vh;
+
+}
+
+.main {
+    margin-top: -3.2vh;
+    background: url("/static/home/images/bg3.jpg") 110% no-repeat fixed;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 90vh;
+    z-index: 0;
+    position: relative;
+}
+
+.back {
+    width: 8vw;
+    height: 5vh;
+    color: white;
+    font-size: 3vh;
+    margin-top: 2vh;
+    cursor: pointer;
+
+}
+
+.description {
+    position: absolute;
+    background-color: rgba(0,0,0,0.7);
+    width: 60vw;
+    height: 60vh;
+    margin-left: 19vw;
+    margin-top: 10vh;
+    text-align: center;
+    font-family: "next";
+}
+
+.parts {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#wait {
+    font-size: 5vh;
+    color: white;
+    font-family: "next";
+    margin-top: 25vh;
+}
+
+#subcategories, #categories, #entities, #wait {
+    visibility: hidden;
+}
+
+    .logo img {
+        margin-top: 0vh;
+        margin-left: 4vw;
+        height: 30vh;
+        width: 12vw;
+    }

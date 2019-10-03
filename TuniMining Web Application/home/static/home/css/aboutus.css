@@ -1,0 +1,89 @@
+{% load static %}
+@font-face {
+    font-family: 'next';
+    src: url('../fonts/nexa/light.otf')
+  }
+  @font-face {
+    font-family: 'next-bold';
+    src: url('../fonts/nexa/bold.otf')
+  }
+
+.main {
+    margin-top: -3.2vh;
+    background: url("/static/home/images/bg3.jpg") 110% no-repeat fixed;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 90vh;
+    z-index: 0;
+    position: relative;
+}
+
+.description {
+    position: absolute;
+    background-color: rgba(0,0,0,0.7);
+    width: 60vw;
+    height: 60vh;
+    margin-left: 19vw;
+    margin-top: 10vh;
+    text-align: center;
+    font-family: "next";
+}
+
+.parts {
+  
+}
+
+.title {
+    color: white;
+    font-family: "next";
+    font-size: 4vh;
+    margin-top: 3vh;
+    float: center;
+}
+.profiles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+#aklom , #ibti {
+    float: left;
+    color: white;
+    font-family: "next";
+    margin: 6vh 14vh;
+    font-size: 2vh;
+}
+
+.name {
+    font-size: 3vh;
+
+}
+
+.photo {
+    width: 20vh;
+    margin: 1vh 0vh;
+
+}
+
+.logos img {
+    width: 5vh;
+    margin: 1vh;
+    
+}
+
+.note img {
+    width: 2.5vh;
+}
+
+.note span {
+    margin-top: 4vh;
+}
+
+.note {
+    font-family: "next";
+    font-size: 2vh;
+    color: white;
+
+}

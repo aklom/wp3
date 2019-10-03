@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<link rel="stylesheet" type="text/css" href="{% static 'home/css/aboutus.css' %}" />
+<link rel="icon" type="image/png" href="{% static 'home/images/icon.png' %}" />
+
+<script src="{% static 'home/js/superpose.js' %}"></script>
+
+    <div class = "main">
+
+        <div class = "description ">
+            <div class="parts" id="aboutus">
+                <div class = "title">  About us </div>
+            </div>
+            <div class="profiles">
+                <div id="aklom">
+                    <img class="photo" src="{% static 'home/images/molka.png' %}"/>
+                    <div class="name"> Molka Zaouali </div>
+                    <div class="logos"> 
+                            <a href="https://www.linkedin.com/in/molka-zaouali/" rel="noreferrer noopener" target="_blank"><span><img src="{% static 'home/images/linkedin.png' %}" href=""></span></a>
+                            <a href="https://github.com/aklom" rel="noreferrer noopener" target="_blank"><span><img src="{% static 'home/images/git.png' %}" /></span></a>
+
+                    </div>
+
+                </div>
+                <div id="ibti">
+                    <img class="photo" src="{% static 'home/images/ibti.png' %}"/>
+                    <div class="name"> Ibtihel Sidhom </div>
+                    <div class="logos"> 
+                            <a href="https://www.linkedin.com/in/ibtihel-sidhom/" rel="noreferrer noopener" target="_blank"><span><img src="{% static 'home/images/linkedin.png' %}"></span></a>
+                            <a href="https://github.com/IbtihelSidhom" rel="noreferrer noopener" target="_blank"><span><img src="{% static 'home/images/git.png' %}" /></span></a>
+                        </div>
+                </div>
+            </div> 
+            <!--<div class="note">
+                Developed to serve our country in May 2018! 
+                
+                <span><img src="{% static 'home/images/tn.png' %}" /> </span>-->
+            </div>
+
+    </div>
+
+{% endblock %}

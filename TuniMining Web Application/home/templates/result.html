@@ -1,0 +1,210 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+ <head>
+     <link rel="stylesheet" type="text/css" href="{% static 'home/css/result.css' %}" />
+
+     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+     <script type="text/javascript" >
+    var positive = {{positive}};
+    var negative = {{negative}};
+    var neutral = {{counter}} - {{positive}} - {{negative}};
+
+
+
+    var neg1 = {{neg1}};
+    var neg2 = {{neg2}};
+    var neg3 = {{neg3}};
+    var neg4 = {{neg4}};
+    var neg5 = {{neg5}};
+    var pos1 = {{pos1}};
+    var pos2 = {{pos2}};
+    var pos3 = {{pos3}};
+    var pos4 = {{pos4}};
+    var pos5 = {{pos5}};
+    var facebook = {{facebook}};
+    var youtube = {{youtube}};
+
+
+    google.charts.load('current', {'packages':['line']});
+      google.charts.setOnLoadCallback(drawLineChart);
+
+    function drawLineChart() {
+    console.log(final);
+    var rows =  {{rows | safe}};
+    var final = new Array(rows.length + 1);
+    final[0] = ["Day", "Facebook", "Youtube"];
+
+    for(var i = 1; i <= rows.length; i = i + 1){
+
+        final[i] = rows[i - 1];
+    }
+
+
+      var data = new google.visualization.arrayToDataTable(final, false);
+
+
+      var options = {
+          title: 'Total number of mentions',
+           legend: {textStyle: {fontSize: '10'}},
+          explorer: {axis: 'vertical', keepInBounds: true},
+          subtitle: 'per days'
+
+      };
+
+      var chart = new google.charts.Line(document.getElementById('linechart_material'));
+
+      chart.draw(data, options);
+    }
+
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawPieChart);
+      google.charts.setOnLoadCallback(drawChart);
+      google.charts.setOnLoadCallback(drawPieChart3);
+
+      function drawPieChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Neutral',     neutral],
+          ['Positive',      positive],
+          ['Negative',  negative]
+        ]);
+
+        var options = {
+          title: 'Positive - Negative Chart',
+          backgroundColor: 'transparent',
+          fontName: 'next',
+          titleTextStyle: {
+            color: 'white',
+            fontSize: '14'
+            },
+            pieHole: '0.4',
+            legend: {textStyle: {color: 'white', fontName: 'next'}}
+
+
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+
+function drawPieChart3() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Level 1',    neg1],
+          ['Level 2',      neg2],
+          ['Level 3',  neg3],
+          ['Level 4', neg4],
+          ['Level 5',    neg5]
+        ]);
+
+        var options = {
+          title: 'Detailed Negative Comments Chart',
+          backgroundColor: 'transparent',
+          fontName: 'next',
+          titleTextStyle: {
+            color: 'white',
+            fontSize: '14'
+            },
+            legend: {textStyle: {color: 'white', fontName: 'next'}, position: 'left'}
+
+
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart3'));
+
+        chart.draw(data, options);
+      }
+
+      function drawChart() {
+
+         var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Level 5',    pos5 ],
+          ['Level 4',      pos4],
+          ['Level 3',  pos3],
+          ['Level 2', pos2],
+          ['Level 1',    pos1]
+        ]);
+
+        var options = {
+          title: 'Detailed Positive Comments Chart',
+          backgroundColor: 'transparent',
+          fontName: 'next',
+          titleTextStyle: {
+            color: 'white',
+            fontSize: '14'
+            },
+          legend: {textStyle: {color: 'white', fontName: 'next'}}
+
+        };
+
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
+        chart.draw(data, options);
+      }
+
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawStuff);
+
+      function drawStuff() {
+        var data = new google.visualization.arrayToDataTable([
+          ['Source', 'Percentage', { role: 'style' }],
+          ["Youtube", youtube, 'color:  #ff0000'],
+          ["Facebook", facebook, 'color: blue'],
+        ]);
+
+        var options = {
+          title: 'Data sources chart',
+          legend: { position: 'none' },
+
+          chartArea: {backgroundColor: 'red'},
+          bars: 'horizontal', // Required for Material Bar Charts.
+          axes: {
+            x: {
+              0: { side: 'top', label: 'Percentage'} // Top x-axis.
+            }
+          }
+                  };
+
+        var chart = new google.charts.Bar(document.getElementById('top_x_div'));
+        chart.draw(data, options);
+      };
+    </script>
+
+  </head>
+  <body>
+  <div class="main">
+    <div class="description">
+        <div class = "results" align = "center" style= "margin-left: 1vw; font-size: 2.7vw;"> Search results for: {{entity}} </div>
+
+        <div class="grid-container" style = "margin-top: 2vh;">
+            <div style="margin-top: -2vh;"> <div class="comments-number" style = "width: 30vw; margin-left: 1vw; text-align: center"> Total number of mentions per day </div>
+            <div id="linechart_material" style="width: 27vw; height: 35vh; margin-left: 2vw;"></div>
+            </div>
+
+            <div id="piechart" style="width: 28vw; height: 35vh; margin-left: 0vw; margin-top: 5vh;"></div>
+            <div style = "margin-top: -1.5vh;"> <div class="comments-number" style = "width: 30vw; text-align: center; margin-left: -4vw;"> Data Source Percentages </div>
+            <div id="top_x_div" style="width: 27vw; height: 35vh; margin-left: -3vw;"></div>
+            </div>
+
+
+            <div id="piechart2" style="width: 28vw; height: 35vh; margin-top: -1vh; margin-left: 3.5vw;"></div>
+            <div id="comments" style="margin-left: 4.5vw;">
+                <div class="comments-number"> Total number of comments retrieved: </div>
+                <div class = "number"> {{counter}} comments </div>
+                <div class="comments-number" style = "margin-top:1vh;"> Last updated: </div>
+                <div class = "number" style = "font-size: 3.5vh;"> May 15th, 2018 at 5:00am </div>
+
+            </div>
+            <div id="piechart3" style="width: 28vw; height: 35vh;margin-top: -1vh; margin-left: -3vw;"></div>
+        </div>
+    </div>
+  </div>
+  </body>
+
+{% endblock %}

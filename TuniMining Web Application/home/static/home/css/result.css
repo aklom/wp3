@@ -1,0 +1,104 @@
+{% load static %}
+
+@font-face {
+  font-family: 'next';
+  src: url('../fonts/nexa/light.otf')
+}
+@font-face {
+  font-family: 'next-bold';
+  src: url('../fonts/nexa/bold.otf')
+}
+@font-face {
+  font-family: 'brush';
+  src: url('../fonts/BrushScriptStd.otf')
+}
+.choose {
+    color: white;
+    font-family: "next";
+    font-size: 3vh;
+    margin-top: 11vh;
+}
+.grid-container {
+  display: grid;
+  margin-left: 0vw;
+  margin-top: 0vh;
+   grid-template-columns: auto auto auto;
+  grid-column-gap: 0vw;
+
+}
+.grid-container2 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-row-gap: 3vh;
+  margin-left: 15vw;
+  margin-top: 6vh;
+
+}
+
+
+.grid-item {
+    width: 12vw;
+    height: 8vh;
+    background-color: white;
+    color: white;
+    font-size: 3vh;
+    padding-top: 2vh;
+    cursor: pointer;
+
+}
+
+.main {
+    margin-top: -3.2vh;
+    background: url("/static/home/images/bg3.jpg") 110% no-repeat fixed;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 90vh;
+    z-index: 0;
+    position: relative;
+}
+
+.back {
+    width: 8vw;
+    height: 5vh;
+    color: white;
+    font-size: 3vh;
+    margin-top: 2vh;
+    cursor: pointer;
+
+}
+
+.results {
+    color: white;
+    font-size: 4vh;
+    margin-top: 2vh;
+    margin-left: -2vw;
+}
+
+.description {
+    position: absolute;
+    background-color: rgba(0,0,0,0.7);
+    width: 85vw;
+    height: 80vh;
+    margin-left: 7vw;
+    margin-top: 7vh;
+    color: white;
+    font-family: "next";
+}
+
+#piechart3 {
+    position: relative;
+}
+
+#comments {
+    width: 15vw;
+    height: 5vh;
+    text-align: center;
+    margin-left: -10vw;
+}
+
+.number {
+    font-family: "next-bold";
+    font-size: 4vh;
+}
+
