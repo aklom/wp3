@@ -1,6 +1,5 @@
-# TuniMining
-
-A web-based platform for visualization and tracking of public opinion and e-reputation in Tunisia based on social media analytics :tunisia:!
+# :tunisia: TuniMining :tunisia:
+A web-based platform for visualization and tracking of public opinion and e-reputation in Tunisia based on social media analytics!
 
 
 
