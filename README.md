@@ -1,4 +1,9 @@
-# :tunisia: TuniMining :tunisia:
+<h1 align="center">
+  <a >
+  # :tunisia: TuniMining :tunisia:
+  </a>
+</h1>
+
 A web-based platform for visualization and tracking of public opinion and e-reputation in Tunisia based on social media analytics!
 
 
@@ -38,7 +43,7 @@ The results of the analysis will be displayed in the form of trend diagrams whic
 
 ### :gear: Configuration 
 
-#### Set up your Pyhton environment
+#### Set up your Python environment
 Run this command under the root directory of this repository:
 
 ```shell
