@@ -8,8 +8,8 @@ A web-based platform for visualization and tracking of public opinion and e-repu
 </p>
 
 The idea of Social Network Analysis is that by studying people’s interactions, one can
-discover and understand people’s opinions about brands, companies, sport, art , public
-figures and also determine their popularity; in addition to detecting changes in group
+discover and understand people’s opinions about brands, companies, sport, art, public
+figures, etc. Therefore we can get insights on their popularity and try to detect changes in group
 dynamics over time. 
 
 Following the same state of mind, TuniMining has been created to collects data using social media APIs and performs sentiment analysis to get meaningful insight behind the data about relevant subjects in Tunisia. The architecture of the application can be devided into 4 main sub-systems:
