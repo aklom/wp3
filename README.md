@@ -88,7 +88,7 @@ $ python Cleaning\ \&\ Scoring\ Comments/cleaningSystem.py
 NB: You can upload the existing databases following the steps in the Configuration part to skip this step. :boom:
 
 
-#### Web Application 
+#### TuniMining's Web Application 
 
 To discover our web application and start using sentiment analizer, you can run this command: 
 ```
