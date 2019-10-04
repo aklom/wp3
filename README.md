@@ -121,7 +121,7 @@ These steps will follow:
 5 - Wait a few seconds (Don't give up! :crossed_fingers:) 
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/36090973/66215412-c20aa700-e6c3-11e9-9ef1-866180bc4429.png" width="700"/> 
+  <img src="https://user-images.githubusercontent.com/28828162/66238275-1a0ad300-e6ef-11e9-9756-74d48d3330f0.png" width="700"/> 
 </p>
 
 
