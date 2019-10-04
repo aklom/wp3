@@ -60,9 +60,9 @@ You can follow these two guides to quickly get your [Facebook](https://elfsight.
 
 You can run these commands to synchronize your database with the data we provide: 
 ```
-mongoimport --db database --collection rawComments --file ../Databases/rawComments.json
-mongoimport --db database --collection postsData --file ../Databases/postsData.json
-mongoimport --db database --collection cleanComments --file ../Databases/cleanComments.json
+$ mongoimport --db database --collection rawComments --file ../Databases/rawComments.json
+$ mongoimport --db database --collection postsData --file ../Databases/postsData.json
+$ mongoimport --db database --collection cleanComments --file ../Databases/cleanComments.json
 ```
 
 
