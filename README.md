@@ -2,6 +2,12 @@
 A web-based platform that collects data using social media APIs and performs sentiment analysis to get meaningful insight behind the data about relevant subjects in Tunisia. 
 
 
+<p align="center">
+  <img src="https://media.giphy.com/media/el134f6EXdGjWtDWqO/giphy.gif" width="800"/> 
+</p>
+
+
+
 ## Getting Started
 
 ### Prerequisites
