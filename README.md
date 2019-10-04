@@ -32,7 +32,7 @@ Determining the polarity of the comments based on a sentiment dictionary approac
 The results of the analysis will be displayed in the form of trend diagrams which indicate diﬀerent levels of popularity and polarity.
 
 
-<b> Realized by [Molka Zaouali](https://github.com/aklom) and [Ibtihel Sidhom](https://github.com/IbtihelSidhom) in May 2018 :two_women_holding_hands: </b>
+<b> Realized by [Molka Zaouali](https://github.com/aklom) and [Ibtihel Sidhom](https://github.com/IbtihelSidhom) in April 2018 :two_women_holding_hands: </b>
 
 
 ## Getting started !
