@@ -31,10 +31,9 @@ Determining the polarity of the comments based on a sentiment dictionary approac
 The results of the analysis will be displayed in the form of trend diagrams which indicate diﬀerent levels of popularity and polarity.
 
 
+## Getting started !
 
-
-## Getting Started
-### Configuration 
+### :gear: Configuration 
 
 #### Set up your Pyhton environment
 Run this command under the root directory of this repository:
@@ -66,7 +65,7 @@ $ mongoimport --db database --collection cleanComments --file ../Databases/clean
 ```
 
 
-### User manual
+### :open_book: User manual
 
 #### Data Acquisition (can be skipped)
 
