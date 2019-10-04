@@ -1,6 +1,10 @@
+<p align="center" >
+  <img  src="https://user-images.githubusercontent.com/36090973/66244272-f738e880-e707-11e9-9f07-002fc6696378.png" width="100"/>
+</p>
+
 <h1 align="center">
   <a >
-   :tunisia: TuniMining :tunisia:
+   TuniMining
   </a>
 </h1>
 </br>
@@ -74,7 +78,7 @@ $ mongoimport --db database --collection cleanComments --file ../Databases/clean
 ```
 
 
-### :open_book: User manual
+### :open_book: User Manual
 
 #### Data Acquisition (can be skipped)
 
