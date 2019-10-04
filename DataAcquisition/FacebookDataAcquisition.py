@@ -1,7 +1,13 @@
 import requests
 import sqlite3, csv, nltk
+import os.path
+
 from pymongo import MongoClient
-from .secrets import FACEBOOK_TOKEN
+import secrets
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+entities_file_path = os.path.join(BASE_DIR, "entity-equivalents.csv")
 
 def checkSimilarity(word1, word2):
     return nltk.edit_distance(word1, word2) < 2
@@ -13,7 +19,7 @@ def extractFromFacebook(all_pages, all_entities, curr_entities, db, dbpages):
     base_url = "https://graph.facebook.com/v2.12/"
 
     limit = 'limit=100'
-    access_token = "access_token={}".format(FACEBOOK_TOKEN)
+    access_token = "access_token={}".format(secrets.FACEBOOK_TOKEN)
 
     page_part = "/posts"
     post_part = "/comments"
@@ -22,7 +28,7 @@ def extractFromFacebook(all_pages, all_entities, curr_entities, db, dbpages):
 
     # get entities equivalent words (arabic and latin letters)
     curr_entities_equiv = {}
-    with open('entity-equivalents.csv', 'r', newline='') as equivalentsFile:
+    with open(entities_file_path, 'r', newline='') as equivalentsFile:
         equivalentsReader = csv.reader(equivalentsFile, delimiter=',')
         for row in equivalentsReader:
             for entity in curr_entities:

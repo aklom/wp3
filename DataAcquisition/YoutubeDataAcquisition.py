@@ -2,7 +2,7 @@ from googleapiclient.discovery import build
 import time
 import sqlite3
 from pymongo import MongoClient
-from .secrets import YOUTUBE_DEVELOPER_KEY
+import secrets
 
 
 def get_videos_FromSearch(youtube, keyword, order):
@@ -52,7 +52,7 @@ def get_Comments_FromVideo(youtube, video, entity, db):
     return c
 
 def extractFromYoutube(all_entities, db):
-    DEVELOPER_KEY = YOUTUBE_DEVELOPER_KEY
+    DEVELOPER_KEY = secrets.YOUTUBE_DEVELOPER_KEY
     YOUTUBE_API_SERVICE_NAME = "youtube"
     YOUTUBE_API_VERSION = "v3"
 
