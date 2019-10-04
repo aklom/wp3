@@ -5,7 +5,7 @@ A web-based platform for visualization and tracking of public opinion and e-repu
 
 
 <p align="center">
-  <img src="https://media.giphy.com/media/el134f6EXdGjWtDWqO/giphy.gif" width="600"/> 
+  <img src="https://user-images.githubusercontent.com/28828162/66242659-eed9b100-e6f9-11e9-8e0d-285cc6ffc3eb.gif" width="600"/> 
 </p>
 
 The idea of Social Network Analysis is that by studying people’s interactions, one can
