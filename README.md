@@ -34,40 +34,101 @@ The results of the analysis will be displayed in the form of trend diagrams whic
 
 
 ## Getting Started
-
-### Prerequisites
-
-```
-python3
-```
-
-### Installation
-
 ### Configuration 
+
+#### Set up your Pyhton environment
+Run this command under the root directory of this repository:
+
+```shell
+$ pipenv install
+```
+
+To create a virtual environment you just execute the `$ pipenv shell` command.
+
+
+#### Update your tokens 
+Update the `DataAcquisition/secrets.py` file by adding your API tokens: 
+
+```
+FACEBOOK_TOKEN="your-user-access-token"
+YOUTUBE_DEVELOPER_KEY="your-youtube-developer-key"
+```
+
+You can follow these two guides to quickly get your [Facebook](https://elfsight.com/blog/2017/10/how-to-get-facebook-access-token/) and [Youtube](https://www.slickremix.com/docs/get-api-key-for-youtube/) tokens.
+
+#### Update your Mongo Database by adding the existing collections (optional, but can save you some time to quickly test the application on existing data input :timer_clock:) 
+
+You can run these commands to synchronize your database with the data we provide: 
+```
+mongoimport --db database --collection rawComments --file ../Databases/rawComments.json
+mongoimport --db database --collection postsData --file ../Databases/postsData.json
+mongoimport --db database --collection cleanComments --file ../Databases/cleanComments.json
+```
+
 
 ### User manual
 
+#### Data Acquisition (can be skipped)
+
+To run the data acquisition script and update your database with the latest data retrieved from social media, you can run this script: 
+
+```
+$ python DataAcquisition/GeneralDataAcquisition.py
+```
+
+NB: You can upload the existing databases following the steps in the Configuration part to skip this step. :boom:
+
+#### Data Cleaning (can be skipped)
+
+To clean the rawComments, you can run this script: 
+```
+$ python Cleaning\ \&\ Scoring\ Comments/cleaningSystem.py
+```
+
+NB: You can upload the existing databases following the steps in the Configuration part to skip this step. :boom:
+
+
+#### Web Application 
+
+To discover our web application and start using sentiment analizer, you can run this command: 
+```
+$ python TuniMining\ Web\ Application/manage.py runserver
+```
+These steps will follow: 
+
+1 - Welcome to TuniMining ! :wave:
 <p align="center">
   <img src="https://user-images.githubusercontent.com/36090973/66215551-10b84100-e6c4-11e9-9cbb-5aeaef3e761d.png" width="700"/> 
 </p>
 
+
+2 - Choose the category of the entity you want to test ! (Your biggest dilemma :open_mouth:) 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/36090973/66218764-1e70c500-e6ca-11e9-816b-6616822428d0.png" width="700"/> 
 </p>
 
+3 - Choose the sub-category of the entity you want to test ! (Your second biggest dilemma :astonished:)
 <p align="center">
   <img src="https://user-images.githubusercontent.com/36090973/66218784-2df00e00-e6ca-11e9-8fff-c0f3261522a7.png" width="700"/> 
 </p>
 
+4 - Choose your entity ! (We're almost done :raised_hands:) 
+
 <p align="center">
   <img src="https://user-images.githubusercontent.com/36090973/66218850-5415ae00-e6ca-11e9-8df6-0e32b2a6cf1b.png" width="700"/> 
 </p>
+
+5 - Wait a few seconds (Don't give up! :crossed_fingers:) 
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/36090973/66215412-c20aa700-e6c3-11e9-9ef1-866180bc4429.png" width="700"/> 
 </p>
 
 
+6 - Enjoy getting insights on your entity's popularity (Tadaaaa :tada:)
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/36090973/66215412-c20aa700-e6c3-11e9-9ef1-866180bc4429.png" width="700"/> 
+</p>
 
-
+Hint: You can hover on the charts to get even more insights! 
