@@ -1,8 +1,9 @@
 <h1 align="center">
   <a >
-  # :tunisia: TuniMining :tunisia:
+   :tunisia: TuniMining :tunisia:
   </a>
 </h1>
+</br>
 
 A web-based platform for visualization and tracking of public opinion and e-reputation in Tunisia based on social media analytics!
 
