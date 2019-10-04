@@ -131,4 +131,4 @@ These steps will follow:
   <img src="https://user-images.githubusercontent.com/36090973/66215412-c20aa700-e6c3-11e9-9ef1-866180bc4429.png" width="700"/> 
 </p>
 
-Hint: You can hover on the charts to get even more insights! 
+Hint: You can hover on the charts to get even more insights! :sparkles:
