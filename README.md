@@ -16,7 +16,7 @@ Following the same state of mind, TuniMining has been created to collects data u
 
 :fuelpump: <b> Data Acquisition System </b> 
 
-Extracting comments of Tunisian users with Facebook Graph API and Youtube API.
+Extracting comments of Tunisian users with Facebook Graph API and Youtube API related to some entities we defined.
 
 :bath: <b> Data Cleaning System </b>
 
@@ -24,7 +24,7 @@ The cleaning of the comment text is based on normalizing the data and removing u
 
 :heart: <b> Sentiment Analysis </b> 
 
-Determining the polarity of the comments based on a sentiment dictionary approach. The dictionary was built manually based on the commonly used tunisian dialect expressions (in both latin and arabic characters) and a subjective scoring system.
+Determining the polarity of the comments based on a sentiment dictionary approach. The dictionary was built manually based on commonly used tunisian dialect expressions (in both latin and arabic characters) and a subjective scoring system.
 
 :bar_chart: <b> Visualization Tool </b> 
 
