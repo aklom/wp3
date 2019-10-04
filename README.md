@@ -15,7 +15,7 @@ python3
 
 ## Overview
 
-The application was devided into 4 sub-systems:
+The application is devided into 4 sub-systems:
 
 :fuelpump: <b> Data Acquisition System :</b> 
 
@@ -31,10 +31,7 @@ Determining the polarity of the comments based on a sentiment dictionary (of the
 
 :bar_chart: <b> Visualization Tool </b> 
 
-The results of the analysis will be displayed in the form of trend diagrams which indecate diﬀerent levels of popularity and polarity.
+The results of the analysis will be displayed in the form of trend diagrams which indicate diﬀerent levels of popularity and polarity.
 
 
 
-
-
-This Design&Development Project was conducted as part of the coursework for the 2nd year at the National School of Computer Science - :tn:
