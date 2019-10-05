@@ -1,16 +1,20 @@
-<p align="center" style="background-color: black;" width="1000">
+<!--<p align="center" style="background-color: black;" width="1000">
   <img  src="https://user-images.githubusercontent.com/36090973/66244272-f738e880-e707-11e9-9f07-002fc6696378.png" width="100"/>
 </p>
-<p align="center" style="background-color: black;" width="1000" height="500"></p>
+<p align="center" style="background-color: black;" width="1000" height="500"></p>-->
 
 <h1 align="center">
-  <a >
    TuniMining
-  </a>
 </h1>
+  
+<h4  align="center">  
+  A web-based platform for visualization and tracking of public opinion in Tunisia :tunisia:
+</h4>
+
+</br>
+</br>
 </br>
 
-A web-based platform for visualization and tracking of public opinion and e-reputation in Tunisia based on social media analytics!
 
 
 The idea of Social Network Analysis is that by studying people’s interactions, one can
