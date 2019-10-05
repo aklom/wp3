@@ -1,6 +1,7 @@
-<p align="center" >
+<p align="center" style="background-color: black;" width="1000">
   <img  src="https://user-images.githubusercontent.com/36090973/66244272-f738e880-e707-11e9-9f07-002fc6696378.png" width="100"/>
 </p>
+<p align="center" style="background-color: black;" width="1000" height="500"></p>
 
 <h1 align="center">
   <a >
@@ -12,15 +13,15 @@
 A web-based platform for visualization and tracking of public opinion and e-reputation in Tunisia based on social media analytics!
 
 
-
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/28828162/66242659-eed9b100-e6f9-11e9-8e0d-285cc6ffc3eb.gif" width="600"/> 
-</p>
-
 The idea of Social Network Analysis is that by studying people’s interactions, one can
 discover and understand people’s opinions about brands, companies, sport, art, public
 figures, etc. Therefore we can get insights on their popularity and try to detect changes in group
 dynamics over time. 
+
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/28828162/66242659-eed9b100-e6f9-11e9-8e0d-285cc6ffc3eb.gif" width="600"/> 
+</p>
 
 Following the same state of mind, TuniMining has been created to collects data using social media APIs and performs sentiment analysis to get meaningful insight behind the data about relevant subjects in Tunisia. The architecture of the application can be devided into 4 main sub-systems:
 
