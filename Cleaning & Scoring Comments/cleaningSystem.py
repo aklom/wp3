@@ -27,7 +27,7 @@ def translate_numbers(word):
                         '9': "k"
                        }
         translated_word = ""
-        for i, c in enumerate(word):  
+        for c in word:  
             if c in replace_map.keys(): 
                 translated_word += replace_map[c]
             else: 
