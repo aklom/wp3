@@ -15,14 +15,25 @@ rawComments = db.rawComments.find()
 #########################################################################
 
 def translate_numbers(word):
-    word = word.replace('2', 'a')
-    word = word.replace('3', 'a')
-    word = word.replace('5', "kh")
-    word = word.replace('7', 'h')
-    word = word.replace('8', "gh")
-    word = word.replace('9', "k")
-    return word
-
+    # add check to not replace intentionally given numbers e.g datatime. 
+    # if the word has alphabetic characters then execute replace
+    # else the word is meant to have numericals and pass
+    if [i for i in word if i.isalpha()]:   
+        replace_map = {'2': "a", 
+                       '3': "a", 
+                       '5': "kh",
+                        '7': 'h',
+                        '8': "gh",
+                        '9': "k"
+                       }
+        translated_word = ""
+        for i, c in enumerate(word):  
+            if c in replace_map.keys(): 
+                translated_word += replace_map[c]
+            else: 
+                translated_word += c 
+       
+    return translated_word
 
 def remove_redundant_letters(word):
     return re.sub(r'(.)\1+', r'\1', word)
@@ -72,14 +83,13 @@ def checkSimilarity(word1, word2):
 
 def sentimentScore(words, dictionary):
     scoreComment = tokenCount = 0
-
-    for word in words:
-        for token in dictionary:
-            if checkSimilarity(word, token[0]):
-                if token[1] != "":
-                    scoreComment = scoreComment + int(token[1])
-                    tokenCount = tokenCount + 1
-                    break
+    
+    for word, token in zip(words, dictionary): 
+        if checkSimilarity(word, token[0]):
+            if token[1] != "":
+                scoreComment = scoreComment + int(token[1])
+                tokenCount = tokenCount + 1
+                break
     if tokenCount != 0:
         scoreComment = scoreComment / tokenCount
 
